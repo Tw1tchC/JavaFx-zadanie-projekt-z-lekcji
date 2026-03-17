@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><?import javafx.scene.control.*?><?import javafx.scene.layout.*?><?import javafx.scene.image.ImageView?>
+<AnchorPane prefWidth="400" prefHeight="500" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.projekt_javafx.Controller">
+
+    <VBox spacing="10" layoutX="20" layoutY="20">
+
+        <Label text="Imię:"/>
+        <TextField fx:id="nameField"/>
+
+        <Label text="Email:"/>
+        <TextField fx:id="emailField"/>
+
+        <Label text="Kod pocztowy:"/>
+        <TextField fx:id="postalField"/>
+
+        <Label text="Hasło:"/>
+        <PasswordField fx:id="passwordField"/>
+
+        <Label text="Płeć:"/>
+        <HBox>
+            <RadioButton text="M" fx:id="maleRadio"/>
+            <RadioButton text="K" fx:id="femaleRadio"/>
+        </HBox>
+
+        <Label text="Zainteresowania:"/>
+        <HBox>
+            <CheckBox text="Sport" fx:id="sportCheck"/>
+            <CheckBox text="Muzyka" fx:id="musicCheck"/>
+        </HBox>
+
+        <Label text="Wiek:"/>
+        <Spinner fx:id="ageSpinner"/>
+
+        <Label text="Kraj:"/>
+        <ChoiceBox fx:id="countryChoice"/>
+
+        <Label text="Poziom:"/>
+        <Slider fx:id="levelSlider"/>
+
+        <Button text="Wyślij" onAction="#handleSubmit"/>
+
+        <ImageView fitHeight="100" fitWidth="100"/>
+
+    </VBox>
+</AnchorPane>
