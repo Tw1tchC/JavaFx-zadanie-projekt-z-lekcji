@@ -5,7 +5,7 @@
 
 <AnchorPane prefHeight="650" prefWidth="700"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.Controller">
+            fx:controller="com.example.projekt_javafx.Controller">
 
     <children>
 
@@ -34,7 +34,7 @@
 
             <Button text="Wyślij" onAction="#handleSubmit"/>
 
-            <!-- 🔥 WYNIKI -->
+            
             <VBox spacing="5" styleClass="card" prefWidth="400">
                 <Label text="Twoje dane:" styleClass="title"/>
 
