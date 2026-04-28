@@ -1,17 +1,25 @@
-package com.example.projekt_javafx;
+package sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application
-{ @Override public void start(Stage stage)
-        throws Exception { FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
-    Scene scene = new Scene(loader.load()); stage.setTitle("Project"); stage.setScene(scene); stage.show(); }
+public class Main extends Application {
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 700, 650);
+
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+
+        stage.setTitle("Formularz użytkownika");
+        stage.setScene(scene);
+        stage.show();
+    }
 
     public static void main(String[] args) {
         launch();
     }
-
 }
