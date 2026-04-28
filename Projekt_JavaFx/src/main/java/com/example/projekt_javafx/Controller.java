@@ -20,7 +20,6 @@ public class Controller {
     @FXML private Spinner<Integer> ageSpinner;
     @FXML private Slider ratingSlider;
 
-    // 🔥 WYNIKI
     @FXML private Label resultName;
     @FXML private Label resultEmail;
     @FXML private Label resultPostal;
