@@ -1,45 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?><?import javafx.scene.control.*?><?import javafx.scene.layout.*?><?import javafx.scene.image.ImageView?>
-<AnchorPane prefWidth="400" prefHeight="500" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.projekt_javafx.Controller">
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <VBox spacing="10" layoutX="20" layoutY="20">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-        <Label text="Imię:"/>
-        <TextField fx:id="nameField"/>
+<AnchorPane prefHeight="650" prefWidth="700"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controller">
 
-        <Label text="Email:"/>
-        <TextField fx:id="emailField"/>
+    <children>
 
-        <Label text="Kod pocztowy:"/>
-        <TextField fx:id="postalField"/>
+        <VBox spacing="12" layoutX="150" layoutY="30" styleClass="card">
 
-        <Label text="Hasło:"/>
-        <PasswordField fx:id="passwordField"/>
+            <Label text="Formularz rejestracyjny" styleClass="title"/>
 
-        <Label text="Płeć:"/>
-        <HBox>
-            <RadioButton text="M" fx:id="maleRadio"/>
-            <RadioButton text="K" fx:id="femaleRadio"/>
-        </HBox>
+            <TextField fx:id="nameField" promptText="Imię"/>
+            <TextField fx:id="emailField" promptText="Email"/>
+            <TextField fx:id="postalField" promptText="Kod pocztowy (XX-XXX)"/>
+            <PasswordField fx:id="passwordField" promptText="Hasło"/>
 
-        <Label text="Zainteresowania:"/>
-        <HBox>
-            <CheckBox text="Sport" fx:id="sportCheck"/>
-            <CheckBox text="Muzyka" fx:id="musicCheck"/>
-        </HBox>
+            <HBox spacing="15">
+                <RadioButton fx:id="maleRadio" text="Mężczyzna"/>
+                <RadioButton fx:id="femaleRadio" text="Kobieta"/>
+            </HBox>
 
-        <Label text="Wiek:"/>
-        <Spinner fx:id="ageSpinner"/>
+            <HBox spacing="15">
+                <CheckBox fx:id="sportCheck" text="Sport"/>
+                <CheckBox fx:id="musicCheck" text="Muzyka"/>
+            </HBox>
 
-        <Label text="Kraj:"/>
-        <ChoiceBox fx:id="countryChoice"/>
+            <ChoiceBox fx:id="countryChoice"/>
+            <Spinner fx:id="ageSpinner"/>
+            <Slider fx:id="ratingSlider" min="0" max="10"/>
 
-        <Label text="Poziom:"/>
-        <Slider fx:id="levelSlider"/>
+            <Button text="Wyślij" onAction="#handleSubmit"/>
 
-        <Button text="Wyślij" onAction="#handleSubmit"/>
+            <!-- 🔥 WYNIKI -->
+            <VBox spacing="5" styleClass="card" prefWidth="400">
+                <Label text="Twoje dane:" styleClass="title"/>
 
-        <ImageView fitHeight="100" fitWidth="100"/>
+                <Label fx:id="resultName"/>
+                <Label fx:id="resultEmail"/>
+                <Label fx:id="resultPostal"/>
+                <Label fx:id="resultGender"/>
+                <Label fx:id="resultHobbies"/>
+                <Label fx:id="resultCountry"/>
+                <Label fx:id="resultAge"/>
+                <Label fx:id="resultRating"/>
+            </VBox>
 
-    </VBox>
+        </VBox>
+
+    </children>
 </AnchorPane>
