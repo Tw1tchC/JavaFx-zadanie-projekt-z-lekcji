@@ -1,0 +1,63 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #1e1e2f, #12121a);
+    -fx-font-family: "Segoe UI", "Arial";
+}
+
+.label {
+    -fx-text-fill: #eaeaf0;
+}
+
+.title {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.text-field, .password-field, .choice-box, .spinner {
+    -fx-background-color: #2a2a3d;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 8;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #6c63ff;
+    -fx-effect: dropshadow(gaussian, #6c63ff, 10, 0.5, 0, 0);
+}
+
+.button {
+    -fx-background-color: linear-gradient(to right, #6c63ff, #5a54d1);
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #7d75ff, #6c63ff);
+    -fx-cursor: hand;
+}
+
+.radio-button, .check-box {
+    -fx-text-fill: #dcdcf5;
+}
+
+.slider .track {
+    -fx-background-color: #444;
+}
+
+.slider .thumb {
+    -fx-background-color: #6c63ff;
+}
+
+.card {
+    -fx-background-color: #1f1f2e;
+    -fx-background-radius: 20;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, black, 15, 0.3, 0, 5);
+}
+
+.success {
+    -fx-text-fill: #4CAF50;
+}
